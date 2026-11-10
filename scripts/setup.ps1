@@ -24,6 +24,7 @@ $tmpValue = $env:TEMP.Replace('\', '/')
 $clipyEntry = "$repo\clipy-mcp\node_modules\@clipy\mcp\dist\index.js".Replace('\', '/')
 $videowizardDir = if ($env:VIDEOWIZARD_DIR) { $env:VIDEOWIZARD_DIR.Replace('\', '/') } else { "$env:USERPROFILE/VideoWizard" }
 $figmaServer = if ($env:FIGMA_SERVER) { $env:FIGMA_SERVER.Replace('\', '/') } else { "$env:USERPROFILE/tools/cursor-talk-to-figma-mcp/dist/server.js" }
+$craftAnythingCli = if ($env:CRAFT_ANYTHING_CLI) { $env:CRAFT_ANYTHING_CLI.Replace('\', '/') } else { 'craft-anything-cli' }
 
 # 5) Backup every overwrite target once per run (unique dir, never merged)
 if (Test-Path $CfgDir) {
@@ -43,7 +44,7 @@ if (Test-Path $CfgDir) {
 
 # 6) Render template via the shared JSON-safe renderer
 New-Item -ItemType Directory -Force $CfgDir | Out-Null
-node (Join-Path $repo 'scripts\render-config.js') forward (Join-Path $repo 'config\opencode.json.tpl') (Join-Path $CfgDir 'opencode.json') "HOME=$homeValue" "TMP=$tmpValue" "CLIPY_MCP_ENTRY=$clipyEntry" "VIDEOWIZARD_DIR=$videowizardDir" "FIGMA_SERVER=$figmaServer"
+node (Join-Path $repo 'scripts\render-config.js') forward (Join-Path $repo 'config\opencode.json.tpl') (Join-Path $CfgDir 'opencode.json') "HOME=$homeValue" "TMP=$tmpValue" "CLIPY_MCP_ENTRY=$clipyEntry" "VIDEOWIZARD_DIR=$videowizardDir" "FIGMA_SERVER=$figmaServer" "CRAFT_ANYTHING_CLI=$craftAnythingCli"
 if ($LASTEXITCODE -ne 0) { Write-Error 'render-config failed'; exit 1 }
 
 # 7) jsonc files 1:1

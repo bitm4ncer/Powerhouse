@@ -15,7 +15,7 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue?style=flat-square"></a>
   <img alt="OpenCode 2.x" src="https://img.shields.io/badge/OpenCode-2.x-111111?style=flat-square">
   <img alt="Platforms" src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey?style=flat-square">
-  <img alt="Skills" src="https://img.shields.io/badge/skills-8-8b5cf6?style=flat-square">
+  <img alt="Skills" src="https://img.shields.io/badge/skills-9-8b5cf6?style=flat-square">
 </p>
 
 ---
@@ -54,6 +54,7 @@ Options: `--skip-install` (bash), `-SkipInstall` and `-CfgDir <path>` (PowerShel
 - OpenCode 2.x
 - Node.js 20+ with npm
 - git
+- Optional: `craft-anything-cli` for the Craft Anything MCP server
 
 ### After installing
 
@@ -69,7 +70,7 @@ Options: `--skip-install` (bash), `-SkipInstall` and `-CfgDir <path>` (PowerShel
 | `config/opencode.json.tpl` | OpenCode config template: plugins, providers, MCP servers |
 | `config/opencode-mem.jsonc` | opencode-mem plugin configuration |
 | `config/dcp.jsonc` | Dynamic Context Pruning configuration |
-| `skills/` | 8 skills (see below) |
+| `skills/` | 9 skills (see below) |
 | `tools/dictate/` | Windows push-to-talk dictation (Whisper + a mouse button) |
 | `scripts/` | setup, snapshot, verify, and the config renderer |
 | `clipy-mcp/` | pinned `@clipy/mcp` package manifests |
@@ -94,19 +95,23 @@ Options: `--skip-install` (bash), `-SkipInstall` and `-CfgDir <path>` (PowerShel
 | `videowizard` | local | VideoWizard project tooling |
 | `excalidraw` | local | Live Excalidraw canvas |
 | `clipy` | local | Clipy screen recordings as agent context |
+| `craft-anything` | local | Study and rebuild websites, apps, and games (Craft Anything) |
 | `rea` | local | Reverse engineering (native, managed, browser) |
 | `figma` | local | Figma bridge over a WebSocket |
 | `blender` | local | Blender control through `blender-mcp` |
 | `diffusion` | remote, local | Diffusion Studio integration |
 
 Servers such as Blender, Figma, Strata, and VideoWizard need their own
-application installed. The harness only configures the connection.
+application installed. The harness only configures the connection. Craft
+Anything is a separate Rust binary: install `craft-anything-cli` and put it on
+`PATH`, or set `CRAFT_ANYTHING_CLI` to its absolute path.
 
 ### Skills
 
 | Skill | What it does | Upstream license |
 | --- | --- | --- |
 | `brag` | Short launch videos from a project, with music and motion | Apache-2.0 (Hyperframes); assets CC BY / CC0 |
+| `craft-anything` | Study and rebuild websites, apps, and games | original skill; engine MIT / Apache-2.0 |
 | `effect-house` | TikTok Effect House project editing | original |
 | `excalidraw-skill` | Excalidraw canvas toolkit | MIT (`yctimlin/mcp_excalidraw`) |
 | `gumroad` | Gumroad data and store management from the terminal | original |
@@ -132,6 +137,7 @@ The template uses placeholders that the installer fills in:
 | `{{CLIPY_MCP_ENTRY}}` | `clipy-mcp/node_modules/@clipy/mcp/dist/index.js` |
 | `{{VIDEOWIZARD_DIR}}` | `$VIDEOWIZARD_DIR` or `~/VideoWizard` |
 | `{{FIGMA_SERVER}}` | `$FIGMA_SERVER` or `~/tools/cursor-talk-to-figma-mcp/dist/server.js` |
+| `{{CRAFT_ANYTHING_CLI}}` | `$CRAFT_ANYTHING_CLI` or `craft-anything-cli` on `PATH` |
 
 `OPENCODE_CFG_DIR` overrides the config directory on bash. The template also
 configures a local **Strata** provider for Qwen3.8-Flash-Next; remove the

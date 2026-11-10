@@ -20,6 +20,7 @@ tmp_value="${TMPDIR:-/tmp}"
 clipy_entry="$repo/clipy-mcp/node_modules/@clipy/mcp/dist/index.js"
 videowizard_dir="${VIDEOWIZARD_DIR:-$HOME/VideoWizard}"
 figma_server="${FIGMA_SERVER:-$HOME/tools/cursor-talk-to-figma-mcp/dist/server.js}"
+craft_anything_cli="${CRAFT_ANYTHING_CLI:-craft-anything-cli}"
 cfg_dir="${OPENCODE_CFG_DIR:-$HOME/.config/opencode}"
 skip_install=0
 for arg in "$@"; do
@@ -48,7 +49,7 @@ fi
 # 6) Render template via the shared JSON-safe renderer
 mkdir -p "$cfg_dir"
 node "$repo/scripts/render-config.js" forward "$repo/config/opencode.json.tpl" "$cfg_dir/opencode.json" \
-    "HOME=$home_value" "TMP=$tmp_value" "CLIPY_MCP_ENTRY=$clipy_entry" "VIDEOWIZARD_DIR=$videowizard_dir" "FIGMA_SERVER=$figma_server"
+    "HOME=$home_value" "TMP=$tmp_value" "CLIPY_MCP_ENTRY=$clipy_entry" "VIDEOWIZARD_DIR=$videowizard_dir" "FIGMA_SERVER=$figma_server" "CRAFT_ANYTHING_CLI=$craft_anything_cli"
 
 # 7) jsonc files 1:1
 cp -f "$repo/config/opencode-mem.jsonc" "$cfg_dir/opencode-mem.jsonc"

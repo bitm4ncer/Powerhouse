@@ -27,6 +27,7 @@ If you reuse one of these skills, keep its attribution and license notice.
 | Component | Source | License |
 | --- | --- | --- |
 | `superpowers` | [obra/superpowers](https://github.com/obra/superpowers) | MIT |
+| Craft Anything | [storytold/craft-anything](https://github.com/storytold/craft-anything) | MIT OR Apache-2.0; binary not bundled |
 | `@clipy/mcp` | [clipy.online](https://clipy.online) | proprietary; only package manifests are included |
 | `frontend-design` | Anthropic | not included; upstream license does not permit redistribution |
 | `watch-clipy-recording` | Clipy | not included; install it from Clipy |

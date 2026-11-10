@@ -90,6 +90,13 @@
           "mcp"
         ]
       },
+      "craft-anything": {
+        "type": "local",
+        "command": [
+          "{{CRAFT_ANYTHING_CLI}}",
+          "mcp"
+        ]
+      },
       "figma": {
         "type": "local",
         "command": [
