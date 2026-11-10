@@ -1,0 +1,10 @@
+{
+  "mouseButton": "XButton1",
+  "micDevice": "",
+  "model": "large-v3-turbo",
+  "language": "de",
+  "device": "auto",
+  "maxRecordSeconds": 120,
+  "insertMode": "sendinput",
+  "beep": true
+}

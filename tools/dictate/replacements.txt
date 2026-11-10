@@ -1,0 +1,4 @@
+open code => OpenCode
+power house => Powerhouse
+example => Example
+example term => Example

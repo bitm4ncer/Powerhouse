@@ -1,0 +1,17 @@
+node_modules/
+clipy-mcp/node_modules/
+.venv/
+__pycache__/
+*.pyc
+*.bak
+*.bak-*
+.DS_Store
+/OpenOverview/
+
+# User-generated, never publish
+memory/export.json
+memory/global-rules.json
+service.json
+.auth-token
+.env
+.env.*

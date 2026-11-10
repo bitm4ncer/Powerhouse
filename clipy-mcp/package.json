@@ -1,0 +1,1 @@
+{"name":"clipy-mcp-pinned","private":true,"version":"1.0.0","description":"Pinned @clipy/mcp install (workaround for upstream packaging bug with @modelcontextprotocol/sdk >= 1.13)","dependencies":{"@clipy/mcp":"0.17.0","@modelcontextprotocol/sdk":"1.12.0"}}
