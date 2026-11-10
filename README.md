@@ -15,7 +15,7 @@
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue?style=flat-square"></a>
   <img alt="OpenCode 2.x" src="https://img.shields.io/badge/OpenCode-2.x-111111?style=flat-square">
   <img alt="Platforms" src="https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey?style=flat-square">
-  <img alt="Skills" src="https://img.shields.io/badge/skills-9-8b5cf6?style=flat-square">
+  <img alt="Skills" src="https://img.shields.io/badge/skills-15-8b5cf6?style=flat-square">
 </p>
 
 ---
@@ -70,7 +70,7 @@ Options: `--skip-install` (bash), `-SkipInstall` and `-CfgDir <path>` (PowerShel
 | `config/opencode.json.tpl` | OpenCode config template: plugins, providers, MCP servers |
 | `config/opencode-mem.jsonc` | opencode-mem plugin configuration |
 | `config/dcp.jsonc` | Dynamic Context Pruning configuration |
-| `skills/` | 9 skills (see below) |
+| `skills/` | 15 skills (see below) |
 | `tools/dictate/` | Windows push-to-talk dictation (Whisper + a mouse button) |
 | `scripts/` | setup, snapshot, verify, and the config renderer |
 | `clipy-mcp/` | pinned `@clipy/mcp` package manifests |
@@ -111,7 +111,13 @@ Anything is a separate Rust binary: install `craft-anything-cli` and put it on
 | Skill | What it does | Upstream license |
 | --- | --- | --- |
 | `brag` | Short launch videos from a project, with music and motion | Apache-2.0 (Hyperframes); assets CC BY / CC0 |
+| `blender` | Scene building, assets, lighting, renders, and export | original |
+| `browser-qa` | Playwright UI checks with screenshots and console errors | original |
 | `craft-anything` | Study and rebuild websites, apps, and games | original skill; engine MIT / Apache-2.0 |
+| `deploy-hetzner` | Docker Compose and Caddy deploys with a rollback path | original |
+| `music-sfx` | Music, SFX, voiceover, mixing, and loudness targets | original |
+| `ship-safe` | Secret, PII, and license audit before publishing | original |
+| `skill-author` | Write, test, and maintain OpenCode skills | original |
 | `effect-house` | TikTok Effect House project editing | original |
 | `excalidraw-skill` | Excalidraw canvas toolkit | MIT (`yctimlin/mcp_excalidraw`) |
 | `gumroad` | Gumroad data and store management from the terminal | original |
